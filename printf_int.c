@@ -1,14 +1,12 @@
 #include "main.h"
-
 /**
- * print_number - a unction that prints out a number
- * @index: parameter
- *
- * Return: the length
+ * printf_int - prints integer
+ * @args: argument to print
+ * Return: number of characters printed
  */
-int print_number(va_list index)
+int printf_int(va_list args)
 {
-	int n = va_arg(index, int);
+	int n = va_arg(args, int);
 	int num, last = n % 10, digit, exp = 1;
 	int  i = 1;
 
@@ -44,4 +42,3 @@ int print_number(va_list index)
 
 	return (i);
 }
-

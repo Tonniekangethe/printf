@@ -3,12 +3,11 @@
 
 /**
  * print_cent - print the percentage sign
- * @index: parameter
  *
  * Return: 1
  */
-int print_cent(__attribute__((unused)) va_list index)
+int print_cent(void)
 {
-	write(1, "%", 1);
+	_putchar(37);
 	return (1);
 }
