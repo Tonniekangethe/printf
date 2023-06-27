@@ -11,7 +11,7 @@ int print_number(va_list index)
 	int n;
 	int check = 1;
 	int len = 0;
-	unsigned int num;
+	int num;
 
 	n = va_arg(index, int);
 	/* check if the number is less than 0*/
@@ -25,7 +25,7 @@ int print_number(va_list index)
 	/* check if the number is greater than 9*/
 	while (num / check > 9)
 		check = check * 10;
-	for (; check != 0;)
+	while (check != 0)
 	{
 		len = len + _putchar('0' + num / check);
 		num %= check;
