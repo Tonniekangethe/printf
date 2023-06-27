@@ -23,8 +23,8 @@ int print_number(va_list index)
 	else
 		num = n;
 	/* check if the number is greater than 9*/
-	while (num / check > 9)
-		check = check * 10;
+	while (num % 10 > 9)
+		;
 	while (check != 0)
 	{
 		len = len + _putchar('0' + num / check);
