@@ -1,4 +1,5 @@
-#iclude "main.h"
+#include "main.h"
+#include <unistd.h>
 
 /**
  * print_cent - print the percentage sign
@@ -8,6 +9,6 @@
  */
 int print_cent(__attribute__((unused)) va_list index)
 {
-	_putchar('%');
+	write(1, "%", 1);
 	return (1);
 }
