@@ -1,6 +1,8 @@
 #ifndef MAIN_H
 #define MAIN_H
 
+#define BUFFER_SIZE 1024
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdarg.h>
@@ -31,7 +33,7 @@ int printf_char(va_list val);
 int printf_string(va_list val);
 int _putchar(char c);
 int _printf(const char *format, ...);
-int prt_sting(va_list val);
-
+/*int prt_sting(va_list val);*/
+int print_unsigned_number(int n);
 
 #endif
