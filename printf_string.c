@@ -8,7 +8,7 @@
 int printf_string(va_list val)
 {
 	char *s;
-	int i, len;
+	int i = 0, len;
 
 	s = va_arg(val, char *);
 	if (s == NULL)
@@ -16,8 +16,11 @@ int printf_string(va_list val)
 		s = "(null)";
 	}
 
-		len = _strlen(s);
-		for (i = 0; i < len; i++)
-			_putchar(s[i]);
-		return (len);
+	len = _strlen(s);
+	while (i < len)
+	{
+		_putchar(s[i]);
+		i++;
+	}
+	return (len);
 }
