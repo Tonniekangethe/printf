@@ -8,6 +8,6 @@
  */
 int print_cent(void)
 {
-	_putchar(37);
+	write(1, "%", 1);
 	return (1);
 }
